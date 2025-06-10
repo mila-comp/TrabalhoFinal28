@@ -13,8 +13,10 @@ public class GerenciadorDados {
 
     public void salvarAtletasEmArquivo(String nomeArquivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
+            writer.write("lista de jogadores");
+            writer.newLine();
             for (Atleta atleta : atletas) {
-                writer.write(atleta.getCodigo() + ";" + atleta.getNome() + ";" + atleta.getTelefone());
+                writer.write(atleta.getCodigo() + " " + atleta.getNome() + " " + atleta.getTelefone());
                 writer.newLine();
             }
             System.out.println("Atletas salvos com sucesso em " + nomeArquivo);

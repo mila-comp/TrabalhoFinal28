@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        // Exemplo de uso das classes Local, Percurso, Atleta e TipoProva
+
 
         Local local1 = new Local(1, "Parque Central", "Cidade A");
         Local local2 = new Local(2, "Praça da Liberdade", "Cidade B");
