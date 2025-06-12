@@ -25,7 +25,7 @@ public class CadastroPercurso implements Cadastravel {
         System.out.print("Cidade: ");
         String cidade = scanner.nextLine();
 
-        // Verifica duplicidade por código
+
         boolean existe = percursos.stream()
                 .anyMatch(p -> p.getCodigo() == codigo);
 

@@ -50,9 +50,19 @@ public class CadastroAtleta implements Cadastravel {
     }
 
 
-    public void listarAtletas(String nome){
-        atletas.forEach(a -> {
-                    System.out.println(atletas);
-                });
+    public void listarAtletas(String detalhado) {
+        if (atletas.isEmpty()) {
+            System.out.println("Não há atletas cadastrados.");
+            return;
+        }
+
+        System.out.println("----------------- Atletas Cadastrados -----------------");
+        for (Atleta atleta : atletas) {
+            if (detalhado.equalsIgnoreCase("yes")) {
+                System.out.println(atleta); // Usa o toString() completo
+            } else {
+                System.out.println("Código: " + atleta.getCodigo() + ", Nome: " + atleta.getNome());
+            }
+        }
     }
 }
