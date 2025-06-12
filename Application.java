@@ -51,13 +51,13 @@ public class Application {
                 case 9 -> cadastroProva.registrarTempoFinal();
                 case 10 -> {
                     System.out.println("Carregando dados iniciais...");
-                    // Criar alguns dados iniciais para teste
+
                     criarDadosIniciais(cadastroAtleta, cadastroLocal, cadastroPercurso, cadastroTipoProva, cadastroProva);
                     System.out.println("Dados iniciais carregados com sucesso!");
                 }
                 case 11 -> {
                     System.out.println("Salvando dados...");
-                    // Transferir dados dos cadastros para o gerenciador
+
                     transferirDadosParaGerenciador(gerenciadorDados, cadastroAtleta, cadastroLocal,
                                                   cadastroPercurso, cadastroTipoProva, cadastroProva);
                     gerenciadorDados.salvarTodosDados();
@@ -65,7 +65,7 @@ public class Application {
                 case 12 -> {
                     System.out.println("Carregando dados de arquivos...");
                     gerenciadorDados.carregarTodosDados();
-                    // Transferir dados do gerenciador para os cadastros
+
                     transferirDadosParaCadastros(gerenciadorDados, cadastroAtleta, cadastroLocal,
                                                 cadastroPercurso, cadastroTipoProva, cadastroProva);
                     System.out.println("Dados carregados com sucesso!");
@@ -80,7 +80,7 @@ public class Application {
         } while (opcao != 0);
     }
 
-    // Método para criar dados iniciais para teste
+
     private static void criarDadosIniciais(CadastroAtleta cadastroAtleta, CadastroLocal cadastroLocal,
                                          CadastroPercurso cadastroPercurso, CadastroTipoProva cadastroTipoProva,
                                          CadastroProva cadastroProva) {
