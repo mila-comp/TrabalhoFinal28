@@ -1,0 +1,5 @@
+0;corrida
+401;5K
+402;10K
+403;21K
+404;Maratona

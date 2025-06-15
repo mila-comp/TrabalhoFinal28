@@ -1,0 +1,4 @@
+201;Parque Central;São Paulo
+203;Parque Ibirapuera;São Paulo
+202;Praia de Copacabana;Rio de Janeiro
+0;local 1;Gravataí

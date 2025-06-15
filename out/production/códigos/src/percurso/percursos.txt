@@ -1,0 +1,4 @@
+0;Percurso 1;21.0;Gramado
+301;Volta do Parque;5.0;São Paulo
+302;Orla da Praia;10.0;Rio de Janeiro
+303;Circuito Ibirapuera;21.0;São Paulo
