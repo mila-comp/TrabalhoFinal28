@@ -148,7 +148,7 @@ public class CadastroProva implements Cadastravel {
             System.out.println("Tempo Máximo: " + prova.getTempoMaximo() + " minutos");
             System.out.println("Situação: " + prova.getSituacao());
             if (prova.getSituacao() == SituacaoProva.FINALIZADA && prova.getTempoFinal() != null) {
-                System.out.println("Tempo Final: " + prova.getTempoFinal() + " minutos");
+                System.out.println("Tempo Final: " + prova.getTempoMaximo() + " minutos");
                 System.out.println("Pace Médio: " + prova.calcularPaceMedio() + " min/km");
             }
             System.out.println("----------------------------------------------------");

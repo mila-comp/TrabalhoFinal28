@@ -14,8 +14,8 @@ public class Prova implements Comparable<Prova> {
     private Atleta atleta;
     private double bonus;
     private SituacaoProva situacao;
-    private Double tempoFinal;
-    private Double tempoMaximo;
+    private double tempoFinal;
+    private double tempoMaximo;
 
     public Prova(int codigo, TipoProva tipoProva, Percurso percurso, Local local, Pessoa atleta, double bonus) {
         this.codigo = codigo;
@@ -31,10 +31,10 @@ public class Prova implements Comparable<Prova> {
     private void calcularTempoMaximo() {
         double distancia = percurso.getDistancia();
         switch (tipoProva.getDescricao()) {
-            case "5K" -> this.tempoMaximo = (distancia / 10) + bonus;
-            case "10K" -> this.tempoMaximo = (distancia / 9) + bonus;
-            case "21K" -> this.tempoMaximo = (distancia / 8) + bonus;
-            case "Maratona" -> this.tempoMaximo = (distancia / 7) + bonus;
+            case "5K" -> this.tempoMaximo = (distancia * 5) + bonus;
+            case "10K" -> this.tempoMaximo = (distancia * 10) + bonus;
+            case "21K" -> this.tempoMaximo = (distancia * 21) + bonus;
+            case "Maratona" -> this.tempoMaximo = (distancia * 41) + bonus;
         }
     }
 

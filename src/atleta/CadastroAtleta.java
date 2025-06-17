@@ -62,7 +62,7 @@ public class CadastroAtleta implements Cadastravel {
         System.out.println("----------------- Atletas Cadastrados -----------------");
         for (Atleta atleta : atletas) {
             if (detalhado.equalsIgnoreCase("yes")) {
-                System.out.println(atleta); // Usa o toString() completo
+                System.out.println(atleta);
             } else {
                 System.out.println("Código: " + atleta.getCodigo() + ", Nome: " + atleta.getNome());
             }

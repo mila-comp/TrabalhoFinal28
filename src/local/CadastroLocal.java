@@ -26,7 +26,7 @@ public class CadastroLocal implements Cadastravel {
         System.out.print("Cidade: ");
         String cidade = scanner.nextLine();
 
-        // Verifica duplicidade por nome
+
         boolean existe = locais.stream()
                 .anyMatch(l -> l.getNome().equalsIgnoreCase(nome));
 

@@ -1,5 +1,6 @@
 package src;
 
+import src.atleta.Pessoa;
 import src.local.CadastroLocal;
 import src.local.Local;
 import src.percurso.CadastroPercurso;
@@ -98,14 +99,14 @@ public class Application {
     private static void criarDadosIniciais(CadastroAtleta cadastroAtleta, CadastroLocal cadastroLocal,
                                          CadastroPercurso cadastroPercurso, CadastroTipoProva cadastroTipoProva,
                                          CadastroProva cadastroProva) {
-        // Criar atletas
-        Atleta atleta1 = new Atleta(101, "João Silva", "123456789");
-        Atleta atleta2 = new Atleta(102, "Maria Oliveira", "987654321");
-        Atleta atleta3 = new Atleta(103, "Pedro Santos", "555123456");
 
-        cadastroAtleta.getAtletas().add(atleta1);
-        cadastroAtleta.getAtletas().add(atleta2);
-        cadastroAtleta.getAtletas().add(atleta3);
+        Pessoa pessoa1 = new Atleta(101, "João Silva", "123456789");
+        Pessoa pessoa2 = new Atleta(102, "Maria Oliveira", "987654321");
+        Pessoa pessoa3 = new Atleta(103, "Pedro Santos", "555123456");
+
+        cadastroAtleta.getAtletas().add((Atleta) pessoa1);
+        cadastroAtleta.getAtletas().add((Atleta) pessoa2);
+        cadastroAtleta.getAtletas().add((Atleta) pessoa3);
 
 
         Local local1 = new Local(201, "Parque Central", "São Paulo");
@@ -137,9 +138,9 @@ public class Application {
         cadastroTipoProva.getTiposProva().add(tipoProva4);
 
 
-        Prova prova1 = new Prova(501, tipoProva1, percurso1, local1, atleta1, 0.5);
-        Prova prova2 = new Prova(502, tipoProva2, percurso2, local2, atleta2, 1.0);
-        Prova prova3 = new Prova(503, tipoProva3, percurso3, local3, atleta3, 2.0);
+        Prova prova1 = new Prova(501, tipoProva1, percurso1, local1, pessoa1, 0.5);
+        Prova prova2 = new Prova(502, tipoProva2, percurso2, local2, pessoa2, 1.0);
+        Prova prova3 = new Prova(503, tipoProva3, percurso3, local3, pessoa3, 2.0);
 
         cadastroProva.getProvas().add(prova1);
         cadastroProva.getProvas().add(prova2);
